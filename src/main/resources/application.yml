@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /v1
+spring:
+  application:
+    name: nerdysoft
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nerdysoft-library
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      auto-commit: false
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+library:
+  member:
+    borrow:
+      limit: 10
