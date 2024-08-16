@@ -60,7 +60,7 @@ public class MemberControllerTest {
                 .andExpect(jsonPath("$.membershipDate", instantComparesEqualTo(memberResponse.getMembershipDate())))
                 .andExpect(jsonPath("$._links.self.href", is("http://localhost/members/1")))
                 .andExpect(jsonPath("$._links.update.href", is("http://localhost/members/1")))
-                .andExpect(jsonPath("$._links.delete.href", is("http://localhost/members/1")));;
+                .andExpect(jsonPath("$._links.delete.href", is("http://localhost/members/1")));
     }
 
     @Test
@@ -199,7 +199,7 @@ public class MemberControllerTest {
                 .andExpect(jsonPath("$.status", is(404)))
                 .andExpect(jsonPath("$.title", is("Member not found")))
                 .andExpect(jsonPath("$.detail", is("Member with id 1 not found")))
-                .andExpect(jsonPath("$.instance", is("/members/1")));;
+                .andExpect(jsonPath("$.instance", is("/members/1")));
     }
 
     @Test
